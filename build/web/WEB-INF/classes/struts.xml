@@ -1,0 +1,36 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+
+
+        <action name="login_new" class="login_new">
+            <exception-mapping exception="java.lang.Exception" result="ERROR" />
+            <result name="SUCCESS">welcome_page.jsp</result>
+            <result name="ERROR">error.jsp</result>
+        </action>   
+        
+        <action name="welcome" class="welcome">
+            <exception-mapping exception="java.lang.Exception" result="ERROR" />
+            <result name="SUCCESS">R6_Register.jsp</result>
+            <result name="ERROR">error.jsp</result>
+        </action>  
+          
+        
+        <action name="insert_data" class="insert_data">
+            <exception-mapping exception="java.lang.Exception" result="ERROR" />
+            <result name="SUCCESS">welcome_page.jsp</result>
+            <result name="ERROR">error.jsp</result>
+        </action>    
+        <action name="Logout" class="Logout">
+            <exception-mapping exception="java.lang.Exception" result="ERROR" />
+            <result name="SUCCESS">login_page.jsp</result>
+            <result name="ERROR">error.jsp</result>
+        </action>    
+ 
+        
+    </package>
+</struts>
